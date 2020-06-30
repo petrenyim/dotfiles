@@ -16,12 +16,6 @@ RUN cp /root/.cargo/bin/dust /bin/dust
 
 RUN apt-get install -y mlocate
 
-COPY ./dotfiles /dotfiles
-
-RUN echo "source /dotfiles/aliases" >> ~/.bashrc
-RUN echo "source /dotfiles/prompt" >> ~/.bashrc
-COPY ./dotfiles/tmux.conf ~/.tmux.conf
+RUN echo "source /dotfiles/include" >> ~/.bashrc
 
 RUN updatedb
-
-CMD ["tmux"]
