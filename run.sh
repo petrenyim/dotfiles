@@ -5,7 +5,7 @@ readonly DOCKER_PS="$(docker ps | grep petrenyim_env | wc -l)"
 if [[ "${DOCKER_PS}" != "0" ]]; then
   docker exec -it petrenyim_env tmux -S /tmux_sessions/session attach
 else
-  docker run --restart=always \
+  docker run --rm \
 	-it \
 	-v "/:/host" \
 	-v "$(pwd)/dotfiles:/dotfiles" \
