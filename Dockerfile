@@ -16,6 +16,4 @@ RUN cp /root/.cargo/bin/dust /bin/dust
 
 RUN apt-get install -y mlocate
 
-RUN echo "source /dotfiles/include" >> ~/.bashrc
-
 RUN updatedb
