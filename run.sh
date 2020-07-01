@@ -7,9 +7,12 @@ if [[ "${DOCKER_PS}" != "0" ]]; then
 else
   docker run --rm \
 	-it \
+	--network=host \
 	-v "/:/host" \
 	-v "$(pwd)/dotfiles:/dotfiles" \
-	-v "/home/${USER}/.tmux_sessions:/tmux_sessions" \
+	-v "${HOME}/.ssh:/root/.ssh" \
+	-v "${HOME}/.tmux_sessions:/tmux_sessions" \
+	--env "HOME=/host/${HOME}" \
 	--name petrenyim_env \
-	-w "/host/home/${USER}" env tmux -S /tmux_sessions/session new-session
+	-w "/host/${HOME}" env tmux -S /tmux_sessions/session new-session
 fi
