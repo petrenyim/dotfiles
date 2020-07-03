@@ -15,8 +15,18 @@ apt install -y alacritty
 apt install -y zsh
 apt install -y npm
 apt install -y fzf
+apt install -y ruby
 
 cargo install du-dust
 cp /root/.cargo/bin/dust /bin/dust
 
+# Zsh
 curl -L git.io/antigen > "/usr/bin/antigen.zsh"
+
+# Install z
+wget -O /usr/bin/z.sh https://raw.githubusercontent.com/rupa/z/master/z.sh
+chmod +x /usr/bin/z.sh
+
+# nvim
+apt install -y python3-pip
+pip3 install pynvim
