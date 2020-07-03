@@ -5,3 +5,6 @@ source /usr/bin/antigen.zsh
 antigen init ~/.antigenrc
 
 . /usr/bin/z.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.dotfiles/include ] && source ~/.dotfiles/include
