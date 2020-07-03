@@ -1,6 +1,4 @@
 #!/bin/bash
 
-source "/dotfiles/git-prompt.sh"
 source "/dotfiles/aliases"
-source "/dotfiles/prompt"
 
