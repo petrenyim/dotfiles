@@ -1,4 +1,3 @@
-alias grep=rg
 alias du=dust
 alias tmux="tmux -f /dotfiles/tmux.conf"
 alias vi=nvim

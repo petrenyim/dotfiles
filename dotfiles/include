@@ -1,4 +1,10 @@
 #!/bin/bash
 
 source "/home/$USER/.dotfiles/aliases"
+source "/home/$USER/.dotfiles/.fzf.functions"
 
+PATH="${PATH}:~/bin"
+
+my_screenkey() {
+    screenkey -p fixed -g $(slop) --opacity 0.5 --show-settings -s small
+}

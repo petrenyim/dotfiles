@@ -1,0 +1,11 @@
+src() {
+  local file
+  local line
+
+  read -r file line <<<"$(grep -n --line-buffered --color=never -r "" * | fzf | awk -F: '{print $1, $2}')"
+
+  if [[ -n $file ]]
+  then
+     vim $file +$line
+  fi
+}
